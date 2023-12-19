@@ -1,18 +1,13 @@
 package com.adventofcode.y2023;
 
 import com.adventofcode.util.FileUtil;
-import com.google.common.base.MoreObjects;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
-import static java.util.stream.Collectors.toList;
-
 public class Day1 {
-
     private final static Map<String, Integer> digitNames = Map.of(
             "one", 1,
             "two", 2,
@@ -46,11 +41,10 @@ public class Day1 {
                 .findFirst();
     }
 
-    public static int solution() {
+    public static int part2() {
         return FileUtil
                 .lines("2023/day1")
                 .mapToInt(Day1::number)
                 .sum();
     }
-
 }
